@@ -16,15 +16,15 @@ repository = "https://github.com/Empty2k12/influxdb-rust"
 travis-ci = { repository = "Empty2k12/influxdb-rust", branch = "master" }
 
 [dependencies]
-chrono = { version = "0.4.19", features = ["serde"] }
-futures = "0.3.13"
-lazy_static = "1.4.0"
+chrono = { version = "0.4", features = ["serde"] }
+futures = "0.3"
+lazy_static = "1.4"
 influxdb_derive = { version = "0.4.0", optional = true }
-regex = "1.4.5"
-surf = { version = "2.2.0", default-features = false }
-serde = { version = "1.0.125", features = ["derive"], optional = true }
-serde_json = { version = "1.0.64", optional = true }
-thiserror = "1.0.24"
+regex = "1.4"
+surf = { version = "2.2", default-features = false }
+serde = { version = "1.0", features = ["derive"], optional = true }
+serde_json = { version = "1.0", optional = true }
+thiserror = "1.0"
 
 [features]
 use-serde = ["serde", "serde_json"]
@@ -37,5 +37,5 @@ default = ["use-serde", "hyper-client"]
 derive = ["influxdb_derive"]
 
 [dev-dependencies]
-async-std = { version = "1.9.0", features = ["attributes"] }
-tokio = { version = "1.4.0", features = ["rt-multi-thread", "macros"] }
+async-std = { version = "1.9", features = ["attributes"] }
+tokio = { version = "1.5", features = ["rt-multi-thread", "macros"] }
